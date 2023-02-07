@@ -1,5 +1,7 @@
 # FACC
 
+[![DOI](https://zenodo.org/badge/598025346.svg)](https://zenodo.org/badge/latestdoi/598025346)
+
 - We propose a GD allocation model with the objectives of maximizing guaranteed delivery and user interest and minimizing the penalty of extra traffic cost simultaneously. Our model is robust for guaranteed delivery because we impose soft rather than hard constraints on the traffic cost of each GD contract.
 
 - We also propose an online bidding strategy based on the allocation model to generate the optimal online allocation solution, which is simple to calculate and more adaptive to dynamic unstable traffic environments during the online serving stage. The strategy dynamically adjusts the weights for each GD contract between impressions’ quality and traffic cost based on real-time performance, which brings fairness-aware allocation results.
