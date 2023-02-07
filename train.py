@@ -77,29 +77,4 @@ class Model(object):
         return alloc, demand_allocate, eval_list
 
     def train(self, t=80, lr_init=0.8, budget_ratio=1.5):
-        for epoch in range(t):
-            lr = lr_init / (epoch / 2.0 + 1.0)
-            budget_ratio_t = budget_ratio
-            if budget_ratio > 1.1:
-                budget_ratio_t = budget_ratio - (budget_ratio - 1.1) / t * epoch
-            alloc, demand_allocate, _ = self.delivery(budget_ratio)
-
-            # update alpha
-            ogd_alpha = (self.demand.demand_amount_mat - demand_allocate) / self.demand.demand_amount_mat
-            print("    lr:", round(lr, 4), ",grad_alpha:", round(np.mean(np.absolute(ogd_alpha)), 4),
-                  ",budget_rat:", round(budget_ratio_t, 4))
-            ogd_alpha = ogd_alpha.clip(min=-0.2)
-            ogd_alpha = ogd_alpha.clip(max=0.2)
-            self.dual_alpha_list = self.dual_alpha_list - lr * ogd_alpha
-            self.dual_alpha_list = self.dual_alpha_list.clip(min=0.0)
-            # update pi
-            if self.update_pi:
-                ogd_pi = (self.target_cost_for_compute - np.sum(alloc * self.cost_for_compute,
-                                                                axis=0)) / self.target_cost_for_compute
-                ogd_pi = ogd_pi.clip(min=-0.2)
-                ogd_pi = ogd_pi.clip(max=0.2)
-                self.dual_pi_list = self.dual_pi_list - lr * ogd_pi
-                self.dual_pi_list = self.dual_pi_list.clip(min=0.0)
-                self.dual_pi_list = self.dual_pi_list.clip(max=self.mu)
-
-            print()
+        print("code is coming")
