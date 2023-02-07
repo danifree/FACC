@@ -10,7 +10,7 @@
 - See details in the paper “Fairness-aware Guaranteed Display Advertising Allocation under Traffic Cost Constraint”.
 
 ## Dataset
-- **Note:** In paper, all algorithms are trained based on a distributed Parameter-Server architecture because they are estimated on a large-scale dataset with 36 million real-world requests. Here to demostrate the algo clearly, a synthetically generated dataset since there is no public GD dataset.
+- **Note:** In paper, all algorithms are trained based on a distributed Parameter-Server architecture because they are estimated on a large-scale dataset with 36 million real-world requests. Here to demostrate the algo clearly, a synthetically generated dataset is used since there is no public GD dataset.
 
 ## Run Environment
 - This software suite has been tested under:
